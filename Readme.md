@@ -1,7 +1,7 @@
 # Личный проект «Техномарт»
 
 * Студент: [Иван Танасогло](https://up.htmlacademy.ru/htmlcss/28/user/813757).
-* Наставник: [Станислав Кузнецов] (https://htmlacademy.ru/profile/id237925).
+* Наставник: [Станислав Кузнецов](https://htmlacademy.ru/profile/id237925).
 
 ---
 
