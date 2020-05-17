@@ -65,6 +65,26 @@
         </li>
       </ul>
       <h1>Перфораторы</h1>
+      <form action="" method="GET">
+        <h2>Сортировка</h2>
+        <label>
+          <input type="radio" value="by_price">
+          По цене
+        </label>
+        <label>
+          <input type="radio" value="by_type">
+          По типу
+        </label>
+        <label>
+          <input type="radio" value="by_functionality">
+          По функционалу
+        </label>
+      </form>
+      <form action="" method="GET"> <!--форма стрелок по уменьшению, по увеличению-->
+          <input type="radio" value="up">
+          <input type="radio" value="down">
+        </label>
+      </form>
       <ul class="perforators-list">
         <li class="perforators-item">
           <img src="" alt="Перфоратор Bosch">
@@ -139,7 +159,31 @@
           <a href="">В закладки</a>
         </li>
       </ul>
-      <form action="" method="get">
+      <ul>
+        <li>
+          <a href="">1</a>
+        </li>
+        <li>
+          <a href="">2</a>
+        </li>
+        <li>
+          <a href="">3</a>
+        </li>
+        <li>
+          <a href="">Следующая</a>
+        </li>
+      </ul>
+      <h1>ПАРА СЛОВ О ПЕРФОРАТОРАХ</h1>
+      <p>Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.<br>Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка.<br>В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.</p>
+      <form action="" method="">
+        <h2>Фильтр</h2>
+        <span>Цена:</span>
+        <input type="range" min="0" max="100000" step="100" value="50000">
+        <input type="text" placeholder="0">
+        <span>-</span>
+        <input type="text" placeholder="30000">
+      </form>
+      <form action="" method="GET">
         <fieldset>
           <legend>Производители:</legend>
           <label>
