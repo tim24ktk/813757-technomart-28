@@ -87,9 +87,15 @@
         </ul>
         <h1>Перфораторы</h1>
       </div>
-      
-      <!--здесь будет форма фильтра-->
+      <form action="https://echo.htmlacademy.ru"> <!--форма фильтра-->
+      </form>
       <form action="https://echo.htmlacademy.ru" method="get">
+        <p>Фильтр:</p>
+        <p>Цена</p>
+        <button type="button">Мин</button>
+        <button type="button">Макс</button>
+        <input type="text" name="min" value="0">
+        <input type="text" name="max" value="30000">
         <fieldset>
           <legend>Производители:</legend>
           <label>
@@ -128,7 +134,27 @@
       </form>
       
       <section class="catalog-list">
-        <!--здесь будет форма сортировки-->
+        <form action="https://echo.htmlacademy.ru" method="get"> <!--форма сортировки-->
+          <fieldset>
+            <legend>Сортировка</legend>
+            <label>
+              По цене
+              <input type="radio" name="sorting" value="by-price" checked>
+            </label>
+            <label>
+              По типу
+              <input type="radio" name="sorting" value="by-type">
+            </label>
+            <label>
+              По функционалу
+              <input type="radio" name="sorting" value="by-functional">
+            </label>
+          </fieldset>
+          <fieldset>
+            <input type="radio" name="sorting" value="to-increase" checked>
+            <input type="radio" name="sorting" value="to-reduce">
+          </fieldset>
+        </form>
         <ul class="perforators-list">
           <li class="perforators-item">
             <img src="img/bosch_bfg_6000.jpg" width="144" height="128" alt="Перфоратор Bosch BFG 6000">
