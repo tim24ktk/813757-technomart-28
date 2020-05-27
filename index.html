@@ -4,11 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Техномарт</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cuprum:wght@400;700&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="main-header">
-      <nav class="main-nav">
-        <div class="main-nav-top">
+      <nav class="main-navigation">
+        <div class="navigation-top">
           <a href="#" class="header-logo">Техномарт</a>
           <form action="https://echo.htmlacademy.ru" method="get">
             <label>
@@ -21,14 +23,14 @@
           <a href="">Корзина: <span>0</span></a>
           <a href="" class="order">Оформить заказ</a>
         </div>
-        <section class="main-nav-middle">
+        <section class="navigation-middle">
           <h1>Интернет-магазин строительных материалов и инструментов для ремонта</h1>
-          <a href="tel:+78125550555">+7 (812) 555-05-55</a>
-          <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
-          <div class="main-nav-registration">
-            <a href="">Войти</a>
-            <a href="">Регистрация</a>
-            <a href="">Равшан Джамшутович</a>
+          <a href="tel:+78125550555" class="telefon">+7 (812) 555-05-55</a>
+          <p class="adress">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+          <div class="main-registration">
+            <a href="" class="sign-up">Войти</a>
+            <a href="" class="register">Регистрация</a>
+            <a href="" class="user">Равшан Джамшутович</a>
             <ul class="main-nav-list">
               <li class="main-nav-item">
                 <a href="">Мои заказы</a>
@@ -220,24 +222,26 @@
           <a href="">Отправить заявку</a>
         </article>
       </section>
-      <section class="main-content-about-us">
-        <h1>Компания «Техномарт»</h1>
-        <p>Настоящий мужской шопинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.</p>
-        <p> Мы можем доставить ваш товар в самые отдаленные точки России!</p>
-        <h3>Техномарт работает со многими транспортными компаниями:</h3>
-        <ul>
-          <li>Деловые линии</li>
-          <li>Автотрейдинг</li>
-          <li>ЖелДорЭкспедиция</li>
-        </ul>
-        <a href="">Подробнее о компании</a>
-      </section>
-      <section class="main-content-adress">
-        <h2>Контакты</h2>
-        <p>Вы можете забрать товар сами, заехав к нам в офис:</p>
-        <img src="img/map.jpg" width="300" height="158" alt="Карта">
-        <a href="">Заблудились? Напишите нам!</a>
-      </section>
+      <div class="about-company">
+        <section class="about-us">
+          <h2>Компания «Техномарт»</h2>
+          <p>Настоящий мужской шопинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.</p>
+          <p> Мы можем доставить ваш товар в самые отдаленные точки России!</p>
+          <p>Техномарт работает со многими транспортными компаниями:</p>
+          <ul>
+            <li>Деловые линии</li>
+            <li>Автотрейдинг</li>
+            <li>ЖелДорЭкспедиция</li>
+          </ul>
+          <a href="" class="detail">Подробнее о компании</a>
+        </section>
+        <section class="main-adress">
+          <h2>Контакты</h2>
+          <p>Вы можете забрать товар сами, заехав к нам в офис:</p>
+          <img src="img/map.jpg" width="300" height="158" alt="Карта">
+          <a href="" class="write-us">Заблудились? Напишите нам!</a>
+        </section>
+      </div>
     </main>
 
     <footer class="main-footer">
