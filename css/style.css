@@ -23,6 +23,8 @@
   --icon-background: #212A3A;
   --product-background: #F2F6F8;
   --old-price-color: #A9A9A9;
+  --special-black: #161D29;
+  --buy-active: #518534;
 }
 
 /*Global*/
@@ -67,12 +69,54 @@ img {
   box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24);
 }
 
+.header-logo:active,
+.footer-logo:active {
+  background-color: var(--error);
+}
+
 .main-navigation label {
   color: var(--basic-white);
 }
 
 .navigation-top a {
   color: var(--basic-white);
+}
+
+.navigation-top .bookmarks:active,
+.navigation-top .basket:active {
+  color: var(--basic-white);
+  opacity: 0.5;
+  background-color: var(--special-black);
+}
+
+.navigation-top .order:hover {
+  background-color: var(--success);
+}
+
+.navigation-top .order:active {
+  color: var(--basic-greylight);
+}
+
+.main-registration .sign-up:hover,
+.main-registration .register:hover,
+.main-nav-list a:hover {
+  color: var(--basic-red);
+}
+
+.main-registration .sign-up:active,
+.main-registration .register:active,
+.main-registration .user:active,
+.main-nav-list a:active {
+  color: var(--basic-greylight);
+}
+
+.site-navigation-item:hover {
+  background-color: var(--special-darkgray);
+}
+.site-navigation-item:active {
+  background-color: var(--special-darkgray);
+  color: var(--basic-white);
+  opacity: 0.5;
 }
 
 .navigation-top .order {
@@ -204,6 +248,28 @@ img {
   color: var(--special-yellowlight);
 }
 
+.footer-list a:hover,
+.offerts-list a:hover,
+.feedback a:hover,
+.developed a:hover {
+  text-decoration: underline;
+}
+
+.footer-list a:active,
+.offerts-list a:active {
+  opacity: 0.5;
+}
+
+.social-item a:hover,
+.social-item a:active {
+  background-color: var(--basic-red);
+}
+
+.feedback a:active,
+.developed a:active {
+  color: var(--error);
+}
+
 .footer-copyright {
   color: var(--basic-white);
   background-color: var(--special-darkgray);
@@ -286,6 +352,15 @@ h2.product {
   color: var(--basic-white);
   background-color: var(--basic-green);
   box-shadow: inset 0px -3px 0px #367315;
+}
+
+
+.buy:hover {
+  background-color: var(--success);
+}
+
+.buy:active {
+  background-color: var(--buy-active);
 }
 
 .to-bookmarks {
