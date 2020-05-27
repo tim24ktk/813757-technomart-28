@@ -21,6 +21,8 @@
   --graylight: #EAEAEA;
   --graylight2: #F3F7F9;
   --icon-background: #212A3A;
+  --product-background: #F2F6F8;
+  --old-price-color: #A9A9A9;
 }
 
 /*Global*/
@@ -89,14 +91,14 @@ img {
   line-height: 23px;
 }
 
-.navigation-middle a.telefon {
+.navigation-middle a.phone {
   font-weight: bold;
   font-size: 21px;
   line-height: 30px;
   border: 3px solid var(--basic-white);
 }
 
-.navigation-middle .adress {
+.navigation-middle .address {
   font-size: 14px;
   line-height: 24px;
   color: var(--special-mediumgray);
@@ -224,6 +226,89 @@ img {
 
 /*Catalog*/
 
+.catalog-content {
+  font-family: "PT Sans", Arial, sans-serif;
+}
+
+.bread-crumbs-list {
+  font-size: 13px;
+  line-height: 18px;
+  text-transform: uppercase;
+  list-style: none;
+}
+
+.bread-crumbs-list a {
+  color: var(--basic-black);
+}
+
+h2.product {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: var(--special-mediumgray);
+  background-color: var(--product-background);
+}
+
+.perforators-list {
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 18px;
+  text-transform: uppercase;
+  list-style: none;
+}
+
+.perforators-list h3 {
+  font-size: 18px;
+  line-height: 20px;
+  color: var(--basic-black);
+}
+
+.old-price {
+  text-decoration: line-through;
+  color: var(--old-price-color);
+}
+
+.curent-price {
+  color: var(--basic-white);
+  background-color: var(--basic-red);
+}
+
+.buy,
+.to-bookmarks {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.buy {
+  color: var(--basic-white);
+  background-color: var(--basic-green);
+  box-shadow: inset 0px -3px 0px #367315;
+}
+
+.to-bookmarks {
+  color: var(--special-mediumgray);
+}
+
+.filter legend,
+.filter label {
+  text-transform: uppercase;
+  color: var(--basic-black);
+
+}
+
+.filter legend {
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 30px;
+}
+
+.filter label {
+  font-size: 15px;
+  line-height: 19px;
+}
 
 /*pop-up*/
 
