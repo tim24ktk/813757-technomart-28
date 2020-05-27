@@ -1,0 +1,234 @@
+/*variables*/
+
+:root {
+  --basic-red: #EE3643;
+  --basic-green: #63A63E;
+  --basic-grey: #3D546F;
+  --basic-greylight: #C5C5C5;
+  --basic-background: #F1F5F7;
+  --basic-white: #FFFFFF;
+  --basic-black: #000000;
+  --special-ylellow: #FFBF47;
+  --special-blue: #3BBCE3;
+  --special-lilac: #DC91D8;
+  --special-greenlight: #8ED78F;
+  --special-yellowlight: #FFD180;
+  --special-darkgray: #293449;
+  --special-mediumgray: #32425C;
+  --success: #5FBB2D;
+  --warning: #FFBF47;
+  --error: #BA2732;
+  --graylight: #EAEAEA;
+  --graylight2: #F3F7F9;
+  --icon-background: #212A3A;
+}
+
+/*Global*/
+
+body {
+  min-width: 960px;
+  margin: 0;
+  padding: 0;
+  font-family: "Cuprum PT Sans", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  color: var(--basic-black);
+  background-color: var(--basic-white);
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*Main navigation*/
+
+.main-navigation {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--basic-black);
+  background-color: var(--basic-background);
+}
+
+.navigation-top {
+  background-color: var(--special-darkgray);
+}
+
+.header-logo,
+.footer-logo {
+  background-color: var(--basic-red);
+  box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24);
+}
+
+.main-navigation label {
+  color: var(--basic-white);
+}
+
+.navigation-top a {
+  color: var(--basic-white);
+}
+
+.navigation-top .order {
+  background-color: var(--basic-green);
+}
+
+.navigation-middle h1,
+.navigation-middle a.phone {
+  color: var(--basic-red);
+}
+
+.navigation-middle h1 {
+  font-style: italic;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 23px;
+}
+
+.navigation-middle a.telefon {
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 30px;
+  border: 3px solid var(--basic-white);
+}
+
+.navigation-middle .adress {
+  font-size: 14px;
+  line-height: 24px;
+  color: var(--special-mediumgray);
+}
+
+.main-registration .sign-up,
+.main-registration .register,
+.main-registration .user {
+  font-size: 21px;
+  line-height: 21px;
+  color: var(--basic-black);
+  background-color: var(--basic-white);
+}
+
+.main-nav-list {
+  font-size: 16px;
+  line-height: 18px;
+  list-style: none;
+}
+
+.main-nav-list a {
+  color: var(--special-mediumgray);
+  text-align: center;
+}
+
+.site-navigation-list {
+  background: var(--special-mediumgray);
+  box-shadow: inset 0px -5px 0px #293449;
+  list-style: none;
+}
+
+.site-navigation-list a {
+  color: var(--basic-white);
+}
+
+/*main-content*/
+
+.main-content {
+  color: inherit;
+  background-color: var(--basic-white);
+}
+
+.about-company h2 {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.about-company p {
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 13px;
+  line-height: 24px;
+}
+
+.about-us ul {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  list-style: none;
+}
+
+.about-company a {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--basic-white);
+  background-color: var(--basic-red);
+}
+
+/*footer*/
+
+.main-footer {
+  font-family: "Cuprum", Arial, sans-serif;
+  background-color: var(--special-mediumgray);
+}
+
+.footer-nav {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.footer-contacts a,
+.footer-contacts {
+  color: var(--graylight2);
+}
+
+.footer-list,
+.offerts-list {
+  list-style: none;
+}
+
+.footer-list a {
+  color: var(--basic-background);
+}
+
+.offerts-list a,
+.feedback a,
+.developed a {
+  color: var(--special-yellowlight);
+}
+
+.footer-copyright {
+  color: var(--basic-white);
+  background-color: var(--special-darkgray);
+}
+
+.copyright {
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.social-list {
+  list-style: none;
+}
+
+.social-item a {
+  padding: 10px;
+  background: var(--icon-background);
+  border-radius: 50%;
+}
+
+/*Catalog*/
+
+
+/*pop-up*/
+
+.popup-map,
+.feedback-form,
+.order-basket {
+  display: none;
+}
