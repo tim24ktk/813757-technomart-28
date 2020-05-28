@@ -201,9 +201,10 @@ img {
 
 .about-us ul {
   font-family: "Cuprum", Arial, sans-serif;
-  font-size: 14px;
-  line-height: 18px;
+  font-size: 18px;
+  line-height: 24px;
   list-style: none;
+  color: var(--basic-black);
 }
 
 .about-company a {
@@ -316,12 +317,11 @@ h2.product {
   background-color: var(--product-background);
 }
 
-.perforators-list {
+.perforators-item {
   font-weight: bold;
   font-size: 17px;
   line-height: 18px;
   text-transform: uppercase;
-  list-style: none;
 }
 
 .perforators-list h3 {
