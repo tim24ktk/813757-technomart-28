@@ -25,6 +25,9 @@
   --old-price-color: #A9A9A9;
   --special-black: #161D29;
   --buy-active: #518534;
+  --yellowlight: #FFC047;
+  --popular-background: #F9F5F0;
+  --filter-background: #F7F3EC;
 }
 
 /*Global*/
@@ -185,6 +188,155 @@ img {
   background-color: var(--basic-white);
 }
 
+.main-content-catalog {
+  font-family: "Cuprum", Arial, sans-serif;
+  color: var(--basic-white);
+}
+
+.main-content-list a,
+.main-content-discounts-item a {
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--basic-white);
+  text-transform: uppercase;
+  background-color: rgba(255, 255, 255, .3);
+}
+
+.main-content-list li:first-child {
+  background-color: var(--special-ylellow);
+} 
+
+.main-content-list li:first-child a:hover {
+  background-color: rgba(197, 197, 197, 0.3);
+}
+
+.main-content-list li:first-child a:active {
+  background-color: rgba(169, 169, 169, 0.3);
+}
+
+.main-content-list li:nth-child(2) {
+  background-color: var(--special-blue);
+}
+
+.main-content-list li:last-child {
+  background-color: var(--special-lilac);
+}
+
+.main-content-discounts-list li:first-child {
+  background-color: var(--special-greenlight);
+}
+
+.main-content-discounts-list li:last-child {
+  background-color: var(--yellowlight);
+}
+
+.main-content-slider {
+  background-color: var(--basic-black);
+}
+
+.main-content-slider h2 {
+  font-size: 36px;
+  line-height: 36px;
+  text-transform: uppercase;
+}
+
+.main-content-slider p {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.main-content-slider a {
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: var(--basic-white);
+  background-color: var(--basic-red);
+}
+
+.main-content-slider a:active {
+  background-color: var(--error);
+}
+
+.main-content-catalog h3 {
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.popular-products {
+  background-color: var(--popular-background);
+}
+
+.popular-products h2,
+.popular-manufacturers h2 {
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: var(--special-mediumgray);
+}
+
+.popular-products a,
+.popular-manufacturers a,
+.main-services a {
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: var(--basic-white);
+  background-color: var(--basic-red);
+}
+
+.main-services {
+  background-color: var(--basic-background);
+}
+
+.popular-manufacturer-item {
+  list-style: none;
+}
+
+.popular-manufacturer-list:hover {
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.popular-manufacturer-list:active {
+  opacity: 0.5;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.main-services h2 {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: var(--basic-black);
+}
+
+.main-services p {
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 13px;
+  line-height: 24px;
+  color: var(--basic-black);
+}
+
+.slider-button {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 30px;
+  color: var(--basic-white);
+  background-color: var(--special-mediumgray);
+  box-shadow: 0px 1px 0px #293449, inset 0px 1px 0px #405069;
+}
+
+.slider-button:hover {
+  background-color: var(--special-darkgray);
+}
+
+.pressed {
+  color: var(--special-mediumgray);
+  background-color: var(--basic-white);
+  box-shadow: 0px 1px 0px #FFFFFF;
+}
+
 .about-company h2 {
   font-family: "Cuprum", Arial, sans-serif;
   font-weight: normal;
@@ -308,6 +460,37 @@ img {
   color: var(--basic-black);
 }
 
+.filter legend,
+.filter label {
+  text-transform: uppercase;
+  color: var(--basic-black);
+}
+
+.filter h2,
+.filter button,
+.filter input {
+  font-family: "PT Sans", Arial, sans-serif;
+  background-color: var(--filter-background);
+}
+
+.filter h2 {
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 18px;
+  color: var(--basic-black);
+}
+
+.filter legend {
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 30px;
+}
+
+.filter label {
+  font-size: 15px;
+  line-height: 19px;
+}
+
 h2.product {
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 30px;
@@ -315,6 +498,39 @@ h2.product {
   text-transform: uppercase;
   color: var(--special-mediumgray);
   background-color: var(--product-background);
+}
+
+.catalog-list {
+  font-family: "PT Sans",  Arial, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.catalog-list h2 {
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: normal;
+  color: var(--basic-black);
+}
+
+.sorting,
+.increase {
+  list-style: none;
+}
+
+.sorting a,
+.increase a {
+  color: rgba(0, 0, 0, 0.3);
+  text-decoration: underline;
+  text-decoration-style: dashed;
+  text-decoration-color: var(--basic-red);
+}
+
+a.active {
+  color: var(--basic-red);
+  opacity: 1;
+  text-decoration: none;
 }
 
 .perforators-item {
@@ -367,22 +583,37 @@ h2.product {
   color: var(--special-mediumgray);
 }
 
-.filter legend,
-.filter label {
-  text-transform: uppercase;
+.pages {
+  list-style: none;
+}
+
+.pages a {
+  font-size: 13px;
+  line-height: 18px;
   color: var(--basic-black);
-
+  text-transform: uppercase;
 }
 
-.filter legend {
-  font-weight: bold;
-  font-size: 17px;
+.pages a.current-page{
+  color: var(--basic-white);
+  background-color: var(--basic-red);
+}
+
+.description {
+  background-color: var(--basic-background);
+}
+
+.description h2 {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-weight: normal;
+  font-size: 30px;
   line-height: 30px;
+  text-transform: uppercase;
 }
 
-.filter label {
-  font-size: 15px;
-  line-height: 19px;
+.description p {
+  font-size: 13px;
+  line-height: 24px;
 }
 
 /*pop-up*/

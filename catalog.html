@@ -90,6 +90,7 @@
           <button type="button">Мин</button>
           <button type="button">Макс</button>
           <input type="text" name="min" value="0">
+          <span> - </span>
           <input type="text" name="max" value="30000">
         </fieldset>
         <fieldset>
@@ -106,7 +107,7 @@
             <input type="checkbox" name="manufacturer" value="makita" checked>
             Makita
           </label>
-          <label>
+          <label class="disabled">
             <input type="checkbox" name="manufacturer" value="dewalt">
             Dewalt
           </label>
@@ -131,7 +132,7 @@
       
       <section class="catalog-list">
         <h2>Сортировка</h2>
-        <ul>
+        <ul class="sorting">
           <li>
             <a href="" class="active">По цене</a>
           </li>
@@ -142,9 +143,9 @@
             <a href="">По функционалу</a>
           </li>
         </ul>
-        <ul>
+        <ul class="increase">
           <li>
-            <a href="">По увеличению</a>
+            <a href="" class="active">По увеличению</a>
           </li>
           <li>
             <a href="">По уменьшению</a>
@@ -222,9 +223,9 @@
           <a href="" class="buy">Купить</a>
           <a href="" class="to-bookmarks">В закладки</a>
         </article>
-        <ul>
+        <ul class="pages">
           <li>
-            <a href="">1</a>
+            <a href="" class="current-page">1</a>
           </li>
           <li>
             <a href="">2</a>
@@ -238,7 +239,7 @@
         </ul>
       </section>
       <section class="description">
-        <h1>ПАРА СЛОВ О ПЕРФОРАТОРАХ</h1>
+        <h2>ПАРА СЛОВ О ПЕРФОРАТОРАХ</h2>
         <p>Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне. Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка. В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.</p>
       </section>
     </main>
