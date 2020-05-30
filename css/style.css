@@ -33,10 +33,10 @@
 /*Global*/
 
 body {
-  min-width: 960px;
+  min-width: 960;
   margin: 0;
   padding: 0;
-  font-family: "Cuprum PT Sans", Arial, sans-serif;
+  font-family: "Cuprum PT Sans", "Arial", sans-serif;
   font-size: 14px;
   line-height: 24px;
   color: var(--basic-black);
@@ -55,7 +55,7 @@ img {
 /*Main navigation*/
 
 .main-navigation {
-  font-family: "Cuprum", Arial, sans-serif;
+  font-family: "Cuprum", "Arial", sans-serif;
   font-size: 18px;
   line-height: 24px;
   color: var(--basic-black);
@@ -69,7 +69,7 @@ img {
 .header-logo,
 .footer-logo {
   background-color: var(--basic-red);
-  box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24);
+  box-shadow: inset 0 -5px 0 rgba(0, 0, 0, 0.24);
 }
 
 .header-logo:active,
@@ -141,7 +141,7 @@ img {
 .navigation-middle a.phone {
   font-weight: bold;
   font-size: 21px;
-  line-height: 30px;
+  line-height: 30;
   border: 3px solid var(--basic-white);
 }
 
@@ -173,7 +173,7 @@ img {
 
 .site-navigation-list {
   background: var(--special-mediumgray);
-  box-shadow: inset 0px -5px 0px #293449;
+  box-shadow: inset 0 -5px 0 #293449;
   list-style: none;
 }
 
@@ -189,7 +189,7 @@ img {
 }
 
 .main-content-catalog {
-  font-family: "Cuprum", Arial, sans-serif;
+  font-family: "Cuprum", "Arial", sans-serif;
   color: var(--basic-white);
 }
 
@@ -259,7 +259,7 @@ img {
 
 .main-content-catalog h3 {
   font-size: 24px;
-  line-height: 30px;
+  line-height: 30;
 }
 
 .popular-products {
@@ -268,8 +268,8 @@ img {
 
 .popular-products h2,
 .popular-manufacturers h2 {
-  font-size: 30px;
-  line-height: 30px;
+  font-size: 30;
+  line-height: 30;
   text-transform: uppercase;
   color: var(--special-mediumgray);
 }
@@ -288,43 +288,43 @@ img {
   background-color: var(--basic-background);
 }
 
-.popular-manufacturer-item {
+.popular-manufacturer-list {
   list-style: none;
 }
 
-.popular-manufacturer-list:hover {
-  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+.popular-manufacturer-item:hover {
+  box-shadow: 0 4px 20 rgba(0, 0, 0, 0.15);
 }
 
-.popular-manufacturer-list:active {
+.popular-manufacturer-item:active {
   opacity: 0.5;
-  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 20 rgba(0, 0, 0, 0.15);
 }
 
 .main-services h2 {
-  font-family: "Cuprum", Arial, sans-serif;
+  font-family: "Cuprum", "Arial", sans-serif;
   font-weight: normal;
-  font-size: 30px;
-  line-height: 30px;
+  font-size: 30;
+  line-height: 30;
   text-transform: uppercase;
   color: var(--basic-black);
 }
 
 .main-services p {
-  font-family: "PT Sans", Arial, sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 13px;
   line-height: 24px;
   color: var(--basic-black);
 }
 
 .slider-button {
-  font-family: "Cuprum", Arial, sans-serif;
+  font-family: "Cuprum", "Arial", sans-serif;
   font-weight: bold;
   font-size: 21px;
-  line-height: 30px;
+  line-height: 30;
   color: var(--basic-white);
   background-color: var(--special-mediumgray);
-  box-shadow: 0px 1px 0px #293449, inset 0px 1px 0px #405069;
+  box-shadow: 0 1px 0 #293449, inset 0 1px 0 #405069;
 }
 
 .slider-button:hover {
@@ -334,25 +334,25 @@ img {
 .pressed {
   color: var(--special-mediumgray);
   background-color: var(--basic-white);
-  box-shadow: 0px 1px 0px #FFFFFF;
+  box-shadow: 0 1px 0 #FFFFFF;
 }
 
 .about-company h2 {
-  font-family: "Cuprum", Arial, sans-serif;
+  font-family: "Cuprum", "Arial", sans-serif;
   font-weight: normal;
-  font-size: 30px;
-  line-height: 30px;
+  font-size: 30;
+  line-height: 30;
   text-transform: uppercase;
 }
 
 .about-company p {
-  font-family: "PT Sans", Arial, sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 13px;
   line-height: 24px;
 }
 
 .about-us ul {
-  font-family: "Cuprum", Arial, sans-serif;
+  font-family: "Cuprum", "Arial", sans-serif;
   font-size: 18px;
   line-height: 24px;
   list-style: none;
@@ -360,7 +360,7 @@ img {
 }
 
 .about-company a {
-  font-family: "Cuprum", Arial, sans-serif;
+  font-family: "Cuprum", "Arial", sans-serif;
   font-size: 14px;
   line-height: 18px;
   text-align: center;
@@ -372,7 +372,7 @@ img {
 /*footer*/
 
 .main-footer {
-  font-family: "Cuprum", Arial, sans-serif;
+  font-family: "Cuprum", "Arial", sans-serif;
   background-color: var(--special-mediumgray);
 }
 
@@ -438,7 +438,7 @@ img {
 }
 
 .social-item a {
-  padding: 10px;
+  padding: 10;
   background: var(--icon-background);
   border-radius: 50%;
 }
@@ -446,7 +446,7 @@ img {
 /*Catalog*/
 
 .catalog-content {
-  font-family: "PT Sans", Arial, sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
 }
 
 .bread-crumbs-list {
@@ -469,7 +469,7 @@ img {
 .filter h2,
 .filter button,
 .filter input {
-  font-family: "PT Sans", Arial, sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   background-color: var(--filter-background);
 }
 
@@ -483,7 +483,7 @@ img {
 .filter legend {
   font-weight: bold;
   font-size: 17px;
-  line-height: 30px;
+  line-height: 30;
 }
 
 .filter label {
@@ -492,16 +492,16 @@ img {
 }
 
 h2.product {
-  font-family: "Cuprum", Arial, sans-serif;
-  font-size: 30px;
-  line-height: 30px;
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-size: 30;
+  line-height: 30;
   text-transform: uppercase;
   color: var(--special-mediumgray);
   background-color: var(--product-background);
 }
 
 .catalog-list {
-  font-family: "PT Sans",  Arial, sans-serif;
+  font-family: "PT Sans",  "Arial", sans-serif;
   font-size: 13px;
   line-height: 18px;
   text-transform: uppercase;
@@ -514,13 +514,13 @@ h2.product {
   color: var(--basic-black);
 }
 
-.sorting,
-.increase {
+.sorting-list,
+.increase-list {
   list-style: none;
 }
 
-.sorting a,
-.increase a {
+.sorting-list a,
+.increase-list a {
   color: rgba(0, 0, 0, 0.3);
   text-decoration: underline;
   text-decoration-style: dashed;
@@ -542,7 +542,7 @@ a.active {
 
 .perforators-list h3 {
   font-size: 18px;
-  line-height: 20px;
+  line-height: 20;
   color: var(--basic-black);
 }
 
@@ -558,7 +558,7 @@ a.active {
 
 .buy,
 .to-bookmarks {
-  font-family: "Cuprum", Arial, sans-serif;
+  font-family: "Cuprum", "Arial", sans-serif;
   font-weight: normal;
   font-size: 14px;
   line-height: 18px;
@@ -567,7 +567,7 @@ a.active {
 .buy {
   color: var(--basic-white);
   background-color: var(--basic-green);
-  box-shadow: inset 0px -3px 0px #367315;
+  box-shadow: inset 0 -3px 0 #367315;
 }
 
 
@@ -583,7 +583,7 @@ a.active {
   color: var(--special-mediumgray);
 }
 
-.pages {
+.pages-list {
   list-style: none;
 }
 
@@ -604,10 +604,10 @@ a.active {
 }
 
 .description h2 {
-  font-family: "Cuprum", Arial, sans-serif;
+  font-family: "Cuprum", "Arial", sans-serif;
   font-weight: normal;
-  font-size: 30px;
-  line-height: 30px;
+  font-size: 30;
+  line-height: 30;
   text-transform: uppercase;
 }
 
