@@ -33,7 +33,7 @@
 /*Global*/
 
 body {
-  min-width: 960;
+  min-width: 960px;
   margin: 0;
   padding: 0;
   font-family: "Cuprum PT Sans", "Arial", sans-serif;
@@ -52,6 +52,26 @@ img {
   height: auto;
 }
 
+/*Grid*/
+
+.page {
+  height: 100%;
+}
+
+.page-body {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
+}
+
+/*Main header*/
+
+.main-header {
+  outline: 5px solid rgba(0, 255, 0, 0.3);
+  outline-offset: -5px;
+}
+
 /*Main navigation*/
 
 .main-navigation {
@@ -64,6 +84,11 @@ img {
 
 .navigation-top {
   background-color: var(--special-darkgray);
+}
+
+.header-logo {
+  outline: 5px solid rgba(255, 0, 0, 0.3);
+  outline-offset: -5px;
 }
 
 .header-logo,
@@ -141,7 +166,7 @@ img {
 .navigation-middle a.phone {
   font-weight: bold;
   font-size: 21px;
-  line-height: 30;
+  line-height: 30px;
   border: 3px solid var(--basic-white);
 }
 
@@ -259,7 +284,7 @@ img {
 
 .main-content-catalog h3 {
   font-size: 24px;
-  line-height: 30;
+  line-height: 30px;
 }
 
 .popular-products {
@@ -268,8 +293,8 @@ img {
 
 .popular-products h2,
 .popular-manufacturers h2 {
-  font-size: 30;
-  line-height: 30;
+  font-size: 30px;
+  line-height: 30px;
   text-transform: uppercase;
   color: var(--special-mediumgray);
 }
@@ -293,19 +318,19 @@ img {
 }
 
 .popular-manufacturer-item:hover {
-  box-shadow: 0 4px 20 rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
 }
 
 .popular-manufacturer-item:active {
   opacity: 0.5;
-  box-shadow: 0 4px 20 rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
 }
 
 .main-services h2 {
   font-family: "Cuprum", "Arial", sans-serif;
   font-weight: normal;
-  font-size: 30;
-  line-height: 30;
+  font-size: 30px;
+  line-height: 30px;
   text-transform: uppercase;
   color: var(--basic-black);
 }
@@ -321,7 +346,7 @@ img {
   font-family: "Cuprum", "Arial", sans-serif;
   font-weight: bold;
   font-size: 21px;
-  line-height: 30;
+  line-height: 30px;
   color: var(--basic-white);
   background-color: var(--special-mediumgray);
   box-shadow: 0 1px 0 #293449, inset 0 1px 0 #405069;
@@ -340,8 +365,8 @@ img {
 .about-company h2 {
   font-family: "Cuprum", "Arial", sans-serif;
   font-weight: normal;
-  font-size: 30;
-  line-height: 30;
+  font-size: 30px;
+  line-height: 30px;
   text-transform: uppercase;
 }
 
@@ -438,7 +463,7 @@ img {
 }
 
 .social-item a {
-  padding: 10;
+  padding: 10px;
   background: var(--icon-background);
   border-radius: 50%;
 }
@@ -483,7 +508,7 @@ img {
 .filter legend {
   font-weight: bold;
   font-size: 17px;
-  line-height: 30;
+  line-height: 30px;
 }
 
 .filter label {
@@ -493,8 +518,8 @@ img {
 
 h2.product {
   font-family: "Cuprum", "Arial", sans-serif;
-  font-size: 30;
-  line-height: 30;
+  font-size: 30px;
+  line-height: 30px;
   text-transform: uppercase;
   color: var(--special-mediumgray);
   background-color: var(--product-background);
@@ -542,7 +567,7 @@ a.active {
 
 .perforators-list h3 {
   font-size: 18px;
-  line-height: 20;
+  line-height: 20px;
   color: var(--basic-black);
 }
 
@@ -606,8 +631,8 @@ a.active {
 .description h2 {
   font-family: "Cuprum", "Arial", sans-serif;
   font-weight: normal;
-  font-size: 30;
-  line-height: 30;
+  font-size: 30px;
+  line-height: 30px;
   text-transform: uppercase;
 }
 
