@@ -65,11 +65,12 @@ img {
   align-content: start;
 }
 
-/*Main header*/
+/*Container*/
 
-.main-header {
-  outline: 5px solid rgba(0, 255, 0, 0.3);
-  outline-offset: -5px;
+.container {
+  width: 940px;
+  margin: 0 auto;
+  padding: 0 10px;
 }
 
 /*Main navigation*/
@@ -83,12 +84,15 @@ img {
 }
 
 .navigation-top {
+  padding-top: 12px;
+  padding-bottom: 12px;
   background-color: var(--special-darkgray);
 }
 
-.header-logo {
-  outline: 5px solid rgba(255, 0, 0, 0.3);
-  outline-offset: -5px;
+.navigation-top-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .header-logo,
@@ -151,6 +155,24 @@ img {
   background-color: var(--basic-green);
 }
 
+.navigation-middle .container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 45px;
+  margin-bottom: 45px;
+}
+
+.phone-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.navigation-middle h1 {
+  width: 200px;
+}
+
 .navigation-middle h1,
 .navigation-middle a.phone {
   color: var(--basic-red);
@@ -196,10 +218,22 @@ img {
   text-align: center;
 }
 
+.site-navigation {
+  padding-bottom: 60px;
+}
+
 .site-navigation-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
   background: var(--special-mediumgray);
   box-shadow: inset 0 -5px 0 #293449;
-  list-style: none;
+}
+
+.site-navigation-item {
+  padding: 18px;
 }
 
 .site-navigation-list a {
@@ -362,6 +396,14 @@ img {
   box-shadow: 0 1px 0 #FFFFFF;
 }
 
+.about-company .container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
 .about-company h2 {
   font-family: "Cuprum", "Arial", sans-serif;
   font-weight: normal;
@@ -374,6 +416,10 @@ img {
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 13px;
   line-height: 24px;
+}
+
+.about-us {
+  width: 478px;
 }
 
 .about-us ul {
@@ -394,6 +440,11 @@ img {
   background-color: var(--basic-red);
 }
 
+.main-adress {
+  width: 300px;
+}
+
+
 /*footer*/
 
 .main-footer {
@@ -406,6 +457,22 @@ img {
   line-height: 24px;
 }
 
+.footer-nav .container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 75px;
+}
+
+.footer-menu {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-contacts {
+  width: 327px;
+}
+
 .footer-contacts a,
 .footer-contacts {
   color: var(--graylight2);
@@ -413,7 +480,23 @@ img {
 
 .footer-list,
 .offerts-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  padding-top: 37px;
   list-style: none;
+}
+
+.footer-list {
+  width: 550px;
+}
+
+.offerts-list {
+  padding-left: 25px;
+  width: 525px;
 }
 
 .footer-list a {
@@ -449,8 +532,29 @@ img {
 }
 
 .footer-copyright {
+  padding: 35px 0;
   color: var(--basic-white);
   background-color: var(--special-darkgray);
+}
+
+.footer-copyright p {
+  margin: 0;
+}
+
+.footer-copyright .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.feedback-developed {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-self: end;
+  width: 290px;
+}
+
+.developed {
+  justify-self: end;
 }
 
 .copyright {
@@ -459,7 +563,19 @@ img {
 }
 
 .social-list {
+  margin: 0 auto;
+  padding: 0;
+  width: 135px;
+  justify-self: center;
   list-style: none;
+}
+
+.feedback {
+  width: 147px;
+}
+
+.developed {
+  width: 100px;
 }
 
 .social-item a {
@@ -470,11 +586,17 @@ img {
 
 /*Catalog*/
 
-.catalog-content {
+.catalog-content .container {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  align-content: start;
   font-family: "PT Sans", "Arial", sans-serif;
 }
 
 .bread-crumbs-list {
+  grid-column: 1 / -1;
+  margin: 0;
+  padding: 0;
   font-size: 13px;
   line-height: 18px;
   text-transform: uppercase;
@@ -484,6 +606,23 @@ img {
 .bread-crumbs-list a {
   color: var(--basic-black);
 }
+
+.filter {
+  display: flex;
+  flex-direction: column;
+  outline-offset: -5px;
+  outline: 5px solid rgba(255, 0, 255, 0.7);
+}
+
+.filter fieldset {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 37px;
+  border: none;
+} 
 
 .filter legend,
 .filter label {
@@ -517,6 +656,12 @@ img {
 }
 
 h2.product {
+  grid-column: 1 / -1;
+  margin: 0;
+  padding: 0;
+  padding-top: 29px;
+  padding-bottom: 30px;
+  padding-left: 29px;
   font-family: "Cuprum", "Arial", sans-serif;
   font-size: 30px;
   line-height: 30px;
@@ -526,6 +671,7 @@ h2.product {
 }
 
 .catalog-list {
+  margin-left: 20px;
   font-family: "PT Sans",  "Arial", sans-serif;
   font-size: 13px;
   line-height: 18px;
@@ -558,14 +704,35 @@ a.active {
   text-decoration: none;
 }
 
+.section-catalog {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 25px;
+}
+
 .perforators-item {
+  width: 220px;
+  min-height: 318px;
+  margin-right: 20px;
+  margin-bottom: 20px;
   font-weight: bold;
   font-size: 17px;
   line-height: 18px;
   text-transform: uppercase;
 }
 
-.perforators-list h3 {
+.perforators-item:nth-child(3n) {
+  margin-right: 0;
+}
+
+.perforators-item h3 {
+  margin-top: 28px;
+  margin-right: 17px;
+  margin-bottom: 7px;
+  margin-left: 18px;
   font-size: 18px;
   line-height: 20px;
   color: var(--basic-black);
@@ -574,11 +741,16 @@ a.active {
 .old-price {
   text-decoration: line-through;
   color: var(--old-price-color);
+  text-align: center;
 }
 
 .curent-price {
+  width: 140px;
+  margin-right: 34px;
+  margin-left: 45px;
   color: var(--basic-white);
   background-color: var(--basic-red);
+  text-align: center;
 }
 
 .buy,
@@ -612,19 +784,20 @@ a.active {
   list-style: none;
 }
 
-.pages a {
+.pages-list a {
   font-size: 13px;
   line-height: 18px;
   color: var(--basic-black);
   text-transform: uppercase;
 }
 
-.pages a.current-page{
+.pages-list a.current-page{
   color: var(--basic-white);
   background-color: var(--basic-red);
 }
 
 .description {
+  grid-column: 1 / -1;
   background-color: var(--basic-background);
 }
 
