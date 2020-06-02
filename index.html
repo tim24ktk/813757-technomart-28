@@ -13,7 +13,11 @@
         <div class="navigation-top">
           <div class="container">
             <div class="navigation-top-wrapper">
-              <a href="#" class="header-logo"><img src="img/logo-technomart.png" alt="Техномарт"></a>
+              <div class="image-wrapper">
+                <a href="#" class="header-logo">
+                  <img src="img/logo-technomart.png" alt="Техномарт">
+                 </a>
+              </div>
               <form action="https://echo.htmlacademy.ru" method="get">
                 <label>
                   Поиск:
@@ -21,11 +25,9 @@
                 </label>
                 <button type="submit">Поиск</button>
               </form>
-              <div class="order-wrapper">
-                <a href="" class="bookmarks">Закладки: <span>0</span></a>
-                <a href="" class="basket">Корзина: <span>0</span></a>
-                <a href="" class="order">Оформить заказ</a>
-              </div>
+              <a href="" class="bookmarks">Закладки: <span>0</span></a>
+              <a href="" class="basket">Корзина: <span>0</span></a>
+              <a href="" class="order">Оформить заказ</a>
             </div>
           </div>
         </div>
@@ -36,7 +38,7 @@
               <a href="tel:+78125550555" class="phone">+7 (812) 555-05-55</a>
               <p class="address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
             </div>
-            <div class="main-registration">
+            <div class="main-registration"> <!--не могу понять как отценрировать элементы этого блока,как прижать к правому краю??? -->
               <a href="" class="sign-up">Войти</a>
               <a href="" class="register">Регистрация</a>
             </div>
@@ -121,7 +123,7 @@
           <div class="popular-products-list">
             <article class="perforators-item">
               <img src="img/bosch_bfg_9000.jpg" width="184" height="164" alt="Перфоратор Bosch BFG 9000">
-              <h3>Перфоратор Bosch BFG 9000</h3>
+              <h3>Перфоратор <span class="uppercase-title">Bosch bfg</span> 9000</h3>
               <p class="old-price">32500 Р.</p>
               <p class="curent-price">25500 Р.</p>
               <a href="" class="buy">Купить</a>
@@ -129,7 +131,7 @@
             </article>
             <article class="perforators-item">
               <img src="img/bosch_bfg_3000.jpg" width="127" height="112" alt="Перфоратор Bosch BFG 3000">
-              <h3>Перфоратор Bosch BFG 3000</h3>
+              <h3>Перфоратор <span class="uppercase-title">Bosch bfg</span> 3000</h3>
               <p class="old-price">22500 Р.</p>
               <p class="curent-price">15500 Р.</p>
               <a href="" class="buy">Купить</a>
@@ -137,7 +139,7 @@
             </article>
             <article class="perforators-item">
               <img src="img/bosch_bfg_6000.jpg" width="144" height="128" alt="Перфоратор Bosch BFG 6000">
-              <h3>Перфоратор Bosch BFG 6000</h3>
+              <h3>Перфоратор <span class="uppercase-title">Bosch bfg</span> 6000</h3>
               <p class="old-price">30500 Р.</p>
               <p class="curent-price">25500 Р.</p>
               <a href="" class="buy">Купить</a>
@@ -145,7 +147,7 @@
             </article>
             <article class="perforators-item">
               <img src="img/bosch_bfg_2000.jpg" width="127" height="112" alt="Перфоратор Bosch BFG 2000">
-              <h3>Перфоратор Bosch BFG 2000</h3>
+              <h3>Перфоратор <span class="uppercase-title">Bosch bfg</span> 2000</h3>
               <p class="old-price">0</p>
               <p class="curent-price">12500 Р.</p>
               <a href="" class="buy">Купить</a>
@@ -208,16 +210,28 @@
         <div class="container">
           <h2>Сервисы</h2>
           <p>Хороший интернет-магазин отличается от плохого не только ценами! Мы стараемся изо всех сил чтобы сделать ваши покупки приятными.</p>
-          <button class="slider-button pressed" type="button">Доставка</button>
-          <button class="slider-button" type="button">Гарантия</button>
-          <button class="slider-button" type="button">Кредит</button>
-          <h2>Доставка</h2>
-          <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж!</p>
-          <h2>Гарантия</h2>
-          <p>Если купленный у нас товар поломается или заискрит, а также в случае пожара, спровоцированного его возгоранием, вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый. Дом уж восстановите как-нибудь сами.</p>
-          <h2>Кредит</h2>
-          <p>Залезть в долговую яму стало проще! Кредитные консультанты придут вам на помощь.</p>
-          <a href="">Отправить заявку</a>
+          <section class="main-bottom-slider">
+            <div class="bottom-slider-controls">
+              <button class="slider-button pressed" type="button">Доставка</button>
+              <button class="slider-button" type="button">Гарантия</button>
+              <button class="slider-button" type="button">Кредит</button>
+            </div>
+            <ul class="bottom-slider-list">
+              <li class="bottom-slider-item">
+                <h3>Доставка</h3>
+                <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж!</p>
+              </li>
+              <li class="bottom-slider-item">
+                <h3>Гарантия</h3>
+                <p>Если купленный у нас товар поломается или заискрит, а также в случае пожара, спровоцированного его возгоранием, вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый. Дом уж восстановите как-нибудь сами.</p>
+              </li>
+              <li class="bottom-slider-item">
+                <h3>Кредит</h3>
+                <p>Залезть в долговую яму стало проще! Кредитные консультанты придут вам на помощь.</p>
+                <a href="">Отправить заявку</a>
+              </li>
+            </ul>
+          </section>
         </div>
       </section>
       <div class="about-company">
