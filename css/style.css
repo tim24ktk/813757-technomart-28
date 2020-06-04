@@ -88,6 +88,7 @@ img {
 }
 
 .navigation-top-wrapper {
+  position: relative;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -200,15 +201,16 @@ img {
 }
 
 
-.sign-up::before { /*почему-то он прозрачный*/
+.sign-up::before { /*почему-то его не видно вообще*/
   content: "";
   position: absolute;
   top: 10px;
   left: 24px;
-  width: 18px;
-  height: 18px;
+  width: 20px;
+  height: 17px;
+  background-image: url("img/icon-login.svg");
   background-repeat: no-repeat;
-  background-image: url(img/icon-login.svg); 
+  background-position: 0 0;
 }
 
 .register {
