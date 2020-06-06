@@ -19,11 +19,8 @@
                  </a>
               </div>
               <form class="form-search" action="https://echo.htmlacademy.ru" method="get">
+                <input type="search" name="search" placeholder="Поиск:">
                 <button type="submit"></button>
-                <label>
-                  Поиск:
-                  <input type="search" name="search">
-                </label>
               </form>
               <a href="" class="bookmarks">Закладки: <span>0</span></a>
               <a href="" class="basket">Корзина: <span>0</span></a>
@@ -33,7 +30,7 @@
         </div>
         <section class="navigation-middle">
           <div class="container">
-            <h1>Интернет-магазин строительных материалов и инструментов для ремонта</h1>
+            <h1>Интернет-магазин<br>строительных материалов<br>и инструментов для ремонта</h1> <!--здесь шрифт не тот буква "д" в слове "для" выглядит по разному!!!-->
             <div class="phone-wrapper">
               <a href="tel:+78125550555" class="phone">+7 (812) 555-05-55</a>
               <p class="address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
@@ -246,7 +243,7 @@
           </section>
           <section class="main-adress">
             <h2>Контакты</h2>
-            <p>Вы можете забрать товар сами, заехав к нам в офис:</p>
+            <p>Вы можете забрать товар сами,<br>заехав в наш офис:</p>
             <img src="img/map.jpg" width="300" height="158" alt="Карта">
             <a href="" class="write-us">Заблудились? Напишите нам!</a>
           </section>
@@ -258,7 +255,7 @@
       <section class="footer-nav">
         <div class="container">
           <div class="footer-contacts">
-            <a  href="#" class="footer-logo"><img src="img/logo-technomart.png" alt="Техномарт"></a>
+            <img src="img/footer-logo.svg" alt="Техномарт">
             <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
             <a href="tel:+78125550555">+7 (812) 555-05-55</a>
           </div>
@@ -305,18 +302,18 @@
           </div>
           <ul class="social-list">
             <li class="social-item">
-              <a href="">
-                <img src="img/icon-fb.svg" alt="Facebook">
+              <a href="http://vk.com">
+                <img src="img/icon-vk.svg" alt="Facebook">
               </a>
             </li>
             <li class="social-item">
-              <a href="">
-                <img src="img/icon-insta.svg" alt="Instagram">
+              <a href="http://facebook.com">
+                <img src="img/icon-fb.svg" alt="Instagram">
               </a>
             </li>
             <li class="social-item">
-              <a href="">
-                <img src="img/icon-vk.svg" alt="ВКонтакте">
+              <a href="http://instagram.com">
+                <img src="img/icon-insta.svg" alt="ВКонтакте">
               </a>
             </li>
           </ul>
@@ -334,17 +331,29 @@
       </section>
     </footer>
     <section class="popup-map">
-      <img src="img/map-popup.png" width="980" height="487" alt="Карта">
-      <button type="button">Закрыть</button>
+      <img src="img/map-popup.png" width="980" height="449" alt="Карта">
+      <button type="button"></button>
     </section>
     <section class="feedback-form">
-      <form action="https://echo.htmlacademy.ru" method="post">
-        <input type="text" name="first-name" placeholder="Имя Фамилия">
-        <input type="email" name="mail" placeholder="email@example.com">
-        <textarea name="letter" placeholder="В свободной форме"></textarea>
-        <button type="submit">Отправить</button>
-        <button type="button">Закрыть</button>
+      <form class="feedback-form-section" action="https://echo.htmlacademy.ru" method="post">
+        <div class="feedback-form-wrapper">
+          <p class="input-wrapper">
+            <label>Ваше имя:
+              <input type="text" name="first-name" placeholder="Имя Фамилия">
+            </label>
+          </p>
+          <p class="input-wrapper">
+            <label>Ваш e-mail:
+              <input type="email" name="mail" placeholder="email@example.com">
+            </label>
+          </p>
+          <textarea name="letter" placeholder="В свободной форме"></textarea>
+        </div>
+        <div class="button-wrapper">
+          <button type="submit">Отправить</button>
+        </div>
       </form>
+        <button class="close-form" type="button"></button>
     </section>
   </body>
 </html>
