@@ -19,8 +19,11 @@
                  </a>
               </div>
               <form class="form-search" action="https://echo.htmlacademy.ru" method="get">
-                <input type="search" name="search" placeholder="Поиск:">
-                <button type="submit"></button>
+                  <label for="search-id">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17"><path fill="#ffffff" d="M17 15.586l-3.542-3.542A7.465 7.465 0 0 0 15 7.5 7.5 7.5 0 1 0 7.5 15c1.71 0 3.282-.579 4.544-1.542L15.586 17 17 15.586zM2 7.5C2 4.467 4.467 2 7.5 2 10.532 2 13 4.467 13 7.5c0 3.032-2.468 5.5-5.5 5.5A5.506 5.506 0 0 1 2 7.5z"/></svg>
+                  </label>
+                <input type="search" id="search-id" name="search" placeholder="Поиск:">
+                <button type="submit">Поиск</button>
               </form>
               <a href="" class="bookmarks">Закладки: <span>0</span></a>
               <a href="" class="basket item-in-basket">Корзина: <span>10</span></a>
@@ -30,13 +33,17 @@
         </div>
         <section class="navigation-middle">
           <div class="container">
-            <h1>Интернет-магазин строительных материалов и инструментов для ремонта</h1>
+            <h1>Интернет-магазин<br>строительных материалов<br>и инструментов для ремонта</h1>
             <div class="phone-wrapper">
               <a href="tel:+78125550555" class="phone">+7 (812) 555-05-55</a>
               <p class="address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
             </div>
             <div class="main-registration user-login">
-              <a href="" class="user">Равшан Джамшутович</a>
+              <div class="user-login-wrapper">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="18" viewBox="0 0 20 18"><path fill="#c5c5c5" d="M17.881 14.166c-2.144-.735-4.256-1.666-5.207-2.39-.657-.501-.77-1.618-.517-2.415 1.118-.903 1.864-2.477 1.864-4.278C14.021 2.276 12.221 0 10 0S5.979 2.276 5.979 5.083c0 1.801.746 3.374 1.863 4.277.253.798.141 1.915-.517 2.416-.95.724-3.063 1.654-5.207 2.39S0 18 0 18h20s.025-3.099-2.119-3.834z"/></svg>
+                <a href="" class="user">Равшан Джамшутович</a>
+                <svg xmlns="http://www.w3.org/2000/svg" width="21" height="17" viewBox="0 0 21 17"><g fill="#c5c5c5"><path fill="#c5c5c5" d="M21 8.5L12.125 0v6h-6v5h6v6z"/><path fill="#c5c5c5" d="M3.106 13.952V3.048c.018-.376.171-1.057 1.01-1.057h5.027V0H4.116C1.938 0 1.112 1.81 1.087 3.027v10.946C1.112 15.189 1.938 17 4.116 17h5.027v-1.99H4.116c-.839 0-.992-.683-1.01-1.058z"/></g></svg>
+              </div>
               <ul class="main-nav-list">
                 <li class="main-nav-item">
                   <a href="">Мои заказы</a>
@@ -83,7 +90,7 @@
         <ul class="bread-crumbs-list">
           <li class="bread-crumbs-item">
             <a href="index.html">
-              <img src="img/icon-home.svg" alt="На главную" width="12" height="15">
+              <img src="img/icon-home.svg" alt="На главную" width="12" height="15"><!--?????????-->
             </a>
           </li>
           <li class="bread-crumbs-item">
@@ -93,66 +100,71 @@
             <a href="">Инструмент</a>
           </li>
           <li class="bread-crumbs-item">
-            <a href="">Перфораторы</a>
+            <a class="disabled-link" href="">Перфораторы</a>
           </li>
         </ul>
         <h2 class="product">Перфораторы</h2>
-        <form class="filter" action="https://echo.htmlacademy.ru" method="get"><!--форма фильтра-->
-          <h2 class="filter-heading">Фильтр:</h2>
-          <fieldset class="filter-item">
-            <legend>Цена:</legend>
-            <div class="range-filter">
-              <div class="range-controls">
-                <div class="scale">
-                  <div class="bar"></div>
+        <section class="filters">
+          <h2>Фильтр:</h2>
+          <form class="filter" action="https://echo.htmlacademy.ru" method="get">
+            <fieldset class="filter-item">
+              <legend>Цена:</legend>
+              <div class="range-filter">
+                <div class="range-controls">
+                  <div class="scale">
+                    <div class="bar"></div>
+                  </div>
+                  <div class="toggle toggle-min" tabindex="0"></div>
+                  <div class="toggle toggle-max" tabindex="0"></div>
                 </div>
-                <div class="toggle toggle-min" tabindex="0"></div>
-                <div class="toggle toggle-max" tabindex="0"></div>
+                <div class="price-controls">
+                  <input type="text" name="min-price" value="0">
+                  <!--здесь будет дефис-->
+                  <input type="text" name="max-price" value="30000">
+                </div>
               </div>
-              <div class="price-controls">
-                <input type="text" name="min-price" value="0">
-                <!--здесь будет дефис-->
-                <input type="text" name="max-price" value="30000">
-              </div>
-            </div>
-          </fieldset>
-          <fieldset class="manufacturer-filter">
-            <legend class="manufacturer-legend">Производители:</legend>
-            <label class="manufacturer-label">
-              <input class="visually-hidden" type="checkbox" name="manufacturer" value="bosch" checked>
-              Bosch
-            </label>
-            <label class="manufacturer-label">
-              <input class="visually-hidden" type="checkbox" name="manufacturer" value="interscol">
-              Интерскол
-            </label>
-            <label class="manufacturer-label">
-              <input class="visually-hidden" type="checkbox" name="manufacturer" value="makita" checked>
-              Makita
-            </label>
-            <label class="manufacturer-label manufacturer-disabled">
-              <input class="visually-hidden" type="checkbox" name="manufacturer" value="dewalt">
-              Dewalt
-            </label>
-            <label  class="manufacturer-label">
-              <input class="visually-hidden" type="checkbox" name="manufacturer" value="hitachi">
-              Hitachi
-            </label>
-          </fieldset>
-          <fieldset class="power-filter">
-            <legend class="power-legend">Питание</legend>
-            <label class="power-label">
-              <input class="visually-hidden" type="radio" name="power" value="battery" checked>
-              Аккумуляторные
-            </label>
-            <label class="power-label">
-              <input class="visually-hidden" type="radio" name="power" value="electric">
-              Сетевые
-            </label>
-          </fieldset>
-          <button class="filter-button" type="submit">Показать</button>
-        </form>
-        
+            </fieldset>
+            <fieldset>
+              <legend>Производители:</legend>
+              <ul>
+                <li class="filter-option">
+                  <input class="visually-hidden filter-input-checkbox" type="checkbox" name="bosch" id="bosch-id" checked>
+                  <label for="bosch-id">Bosch</label>
+                </li>
+                <li class="filter-option">
+                  <input class="visually-hidden filter-input-checkbox" type="checkbox" name="interscol" id="interscol-id">
+                  <label for="interscol-id">Интерскол</label>
+                </li>
+                <li class="filter-option">
+                  <input class="visually-hidden filter-input-checkbox" type="checkbox" name="makita" id="makita-id" checked>
+                  <label for="makita-id">Makita</label>
+                </li>
+                <li class="filter-option">
+                  <input class="visually-hidden filter-input-checkbox" type="checkbox" name="dewalt" id="dewalt-id">
+                  <label for="dewalt-id">Dewalt</label>
+                </li>
+                <li class="filter-option">
+                  <input class="visually-hidden filter-input-checkbox" type="checkbox" name="hitachi" id="hitachi-id">
+                  <label for="hitachi-id">Hitachi</label>
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset>
+              <legend class="power-legend">Питание</legend>
+              <ul>
+                <li class="filter-option">
+                  <input class="visually-hidden filter-input-radio" type="radio" name="power" value="battery" id="battery-id" checked>
+                  <label for="battery-id">Аккумуляторные</label>
+                </li>
+                <li class="filter-option">
+                  <input class="visually-hidden filter-input-radio" type="radio" name="power" value="electric" id="electric-id">
+                  <label for="electric-id">Сетевые</label>
+                </li>
+              </ul>
+            </fieldset>
+            <button class="filter-button" type="submit">Показать</button>
+          </form>
+        </section>                 
         <section class="catalog-list">
           <div class="sorting-wrapper">
             <h2 class="catalog-heading">Сортировка</h2>
@@ -296,7 +308,9 @@
       <section class="footer-nav">
         <div class="container">
           <div class="footer-contacts">
-            <img src="img/footer-logo.svg" alt="Техномарт">
+            <a href="#" class="footer-logo">
+              <img src="img/logo-technomart.svg" alt="Техномарт">
+            </a>
             <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
             <a href="tel:+78125550555">+7 (812) 555-05-55</a>
           </div>
@@ -343,13 +357,13 @@
           </div>
           <ul class="social-list">
             <li class="social-item">
-              <a href="http://vk.com"><img src="img/icon-vk.svg" alt="ВКонтакте"></a>
+              <a class="vk-com" href="http://vk.com" aria-label="vk"></a>
             </li>
             <li class="social-item">
-              <a href="http://facebook.com"><img src="img/icon-fb.svg" alt="Facebook"></a>
+              <a class="facebook-com" href="http://facebook.com" aria-label="facebook-com"></a>
             </li>
             <li class="social-item">
-              <a href="http://instagram.com"><img src="img/icon-insta.svg" alt="Instagram"></a>
+              <a class="instagram-com" href="http://instagram.com" aria-label="instagram-com"></a>
             </li>
           </ul>
           <div class="feedback-developed">
@@ -365,7 +379,6 @@
         </div>
       </section>
     </footer>
-    
     <section class="order-basket">
       <p>Товар добавлен в корзину</p>
       <div class="order-basket-link">
