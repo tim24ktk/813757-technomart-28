@@ -4,8 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Техномарт</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cuprum:wght@400;700&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Cuprum:ital@1&family=Cuprum:ital@1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400;0,700;1,400&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body class="page-body">
@@ -81,7 +80,7 @@
     </header>
 
     <main class="catalog-content">
-      <div class=" container">
+      <div class="container">
         <ul class="bread-crumbs-list">
           <li class="bread-crumbs-item">
             <a href="index.html">
@@ -114,11 +113,12 @@
                 </div>
                 <div class="price-controls">
                   <input type="text" name="min-price" value="0">
-                  <!--здесь будет дефис-->
+                  <span class="hyphen">-</span>
                   <input type="text" name="max-price" value="30000">
                 </div>
               </div>
             </fieldset>
+            <div class="line-top"></div>
             <fieldset>
               <legend>Производители:</legend>
               <ul>
@@ -144,8 +144,9 @@
                 </li>
               </ul>
             </fieldset>
+            <div class="line-bottom"></div>
             <fieldset>
-              <legend class="power-legend">Питание</legend>
+              <legend class="power-legend">Питание:</legend>
               <ul>
                 <li class="filter-option" tabindex="0">
                   <input class="visually-hidden filter-input-radio" type="radio" name="power" value="battery" id="battery-id" checked>
@@ -162,7 +163,7 @@
         </section>                 
         <section class="catalog-list">
           <div class="sorting-wrapper">
-            <h2 class="catalog-heading">Сортировка</h2>
+            <h2 class="catalog-heading">Сортировка:</h2>
             <ul class="sorting-list">
               <li class="sorting-item">
                 <a href="" class="active">По цене</a>
@@ -176,10 +177,14 @@
             </ul>
             <ul class="increase-list">
               <li class="increase-item">
-                <a href="" class="active">По увеличению</a>
+                <a href="" class="active">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10"><path fill="#231F20" d="M5.5 0L0 10h11z"/></svg>
+                </a>
               </li>
               <li class="increase-item">
-                <a href="">По уменьшению</a>
+                <a href="">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10"><path fill="#231F20" d="M5.5 10L0 0h11"/></svg>
+                </a>
               </li>
             </ul>
           </div>
@@ -286,15 +291,15 @@
               <a href="">3</a>
             </li>
             <li class="pages-item">
-              <a href="">Следующая</a>
+              <a href="" class="next">Следующая</a>
             </li>
           </ul>
-        </section>
-      </div>
+        </div>
+      </section>
       <section class="description">
         <div class="container">
-          <h2>Пара слов о перфараторах</h2>
-          <p>Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне. Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка. В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.</p>
+          <h2>Пара слов о перфораторах</h2>
+          <p>Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.<br> Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка.<br> В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.</p>
         </div>
       </section>
     </main>
@@ -304,7 +309,7 @@
         <div class="container">
           <div class="footer-contacts">
             <a href="#" class="footer-logo">
-              <img src="img/logo-technomart.svg" alt="Техномарт">
+              <img src="img/logo-technomart.svg" width="108" height="18" alt="Техномарт">
             </a>
             <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
             <a href="tel:+78125550555">+7 (812) 555-05-55</a>
