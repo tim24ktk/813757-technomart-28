@@ -788,6 +788,7 @@ button.arrow-left {
   background-repeat: no-repeat;
   background-color: transparent;
   border: none;
+  cursor: pointer;
 }
 
 button.arrow-right {
@@ -800,6 +801,32 @@ button.arrow-right {
   background-repeat: no-repeat;
   background-color: transparent;
   border: none;
+  cursor: pointer;
+}
+
+button.bullet-left,
+button.bullet-right {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  width: 10px;
+  height: 10px;
+  border: 2px solid var(--basic-white);
+  border-radius: 50%;
+}
+
+.bullet-active {
+  background-color: var(--basic-red);
+}
+
+button.bullet-left {
+  bottom: 36px;
+  left: 295px;
+}
+
+button.bullet-right {
+  bottom: 36px;
+  right: 295px;
 }
 
 /*Состояние красных кнопок*/
