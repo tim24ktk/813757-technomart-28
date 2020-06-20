@@ -34,6 +34,7 @@
   --toggle-background: #ababab;
   --basket-link-background: #F1F1F1;
   --hyphen-color: #444444;
+  --hover-background: #CA2C37; 
 }
 
 /*Global*/
@@ -179,9 +180,11 @@ input[type="radio"].visually-hidden {
   position: absolute;
   top: 10px;
   left: 17px;
+  fill-opacity: 0.5;
 }
 
 .form-search input {
+  width: inherit;
   padding-top: 7px;
   padding-bottom: 8px;
   padding-left: 42px;
@@ -195,10 +198,6 @@ input[type="radio"].visually-hidden {
 
 .form-search:focus-within {
   background-color: var(--basic-white);
-}
-
-.form-search svg {
-  fill-opacity: 0.5;
 }
 
 .form-search:hover svg {
@@ -215,10 +214,6 @@ input[type="radio"].visually-hidden {
   font-size: 18px;
   color: var(--basic-white);
   opacity: 1;
-}
-
-.form-search button {
-  display: none;
 }
 
 .bookmarks,
@@ -414,7 +409,7 @@ input[type="radio"].visually-hidden {
 }
 
 .main-registration .register {
-  padding-top: 12px;
+  padding-top: 14px;
   padding-right: 24px;
   padding-bottom: 12px;
   padding-left: 24px;
@@ -683,11 +678,19 @@ input[type="radio"].visually-hidden {
   background-position: 0 0;
 }
 
-.materials a:hover {
+.materials a:hover,
+.tool a:hover,
+.equipment a:hover,
+.discounts a:hover,
+.delivery a:hover {
   background-color: rgba(197, 197, 197, 0.3);
 }
 
-.materials a:active {
+.materials a:active,
+.tool a:active,
+.equipment a:active,
+.discounts a:active,
+.delivery a:active {
   background-color: rgba(169, 169, 169, 0.3);
 }
 
@@ -701,12 +704,21 @@ input[type="radio"].visually-hidden {
 }
 
 .main-content-slider {
+  position: relative;
   margin: 0;
   padding: 0;
   margin-top: 20px;
   width: 620px;
-  height: 266px;
+  min-height: 266px;
   background-color: var(--basic-black);
+  padding-top: 23px;
+  padding-right: 21px;
+  padding-bottom: 27px;
+  padding-left: 24px;
+}
+
+.slider-backgorund-perforators {
+  background-image: url("../img/man_with_perforaotr.jpg");
 }
 
 .slider-backgorund-drill {
@@ -737,11 +749,15 @@ input[type="radio"].visually-hidden {
 }
 
 .main-content-slider p {
+  margin-top: 6px;
   font-size: 18px;
   line-height: 24px;
 }
 
 .main-content-slider a {
+  position: absolute;
+  bottom: 27px;
+  padding: 10px 46px;
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
@@ -749,7 +765,60 @@ input[type="radio"].visually-hidden {
   background-color: var(--basic-red);
 }
 
-.main-content-slider a:active {
+.main-content-slider ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.slider-item {
+  display: none;
+}
+
+.current-display {
+  display: block;
+}
+
+button.arrow-left {
+  position: absolute;
+  top: 46%;
+  width: 22px;
+  height: 40px;
+  background-image: url("../img/icon-left.svg");
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border: none;
+}
+
+button.arrow-right {
+  position: absolute;
+  top: 46%;
+  right: 21px;
+  width: 22px;
+  height: 40px;
+  background-image: url("../img/icon-right.svg");
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border: none;
+}
+
+/*Состояние красных кнопок*/
+
+.main-content-slider a:hover,
+.popular-products a:hover,
+.popular-manufacturers-heading a:hover,
+.bottom-slider-item a:hover,
+.detail:hover,
+.write-us:hover {
+  background-color: var(--hover-background);
+}
+
+.main-content-slider a:active,
+.popular-products a:active,
+.popular-manufacturers-heading a:active,
+.bottom-slider-item a:active,
+.detail:active,
+.write-us:active {
   background-color: var(--error);
 }
 
@@ -919,6 +988,7 @@ p.good-store {
 }
 
 .slider-button {
+  width: 240px;
   padding-top: 16px;
   padding-right: 139px;
   padding-bottom: 17px;
@@ -930,6 +1000,18 @@ p.good-store {
   color: var(--basic-white);
   background-color: var(--special-mediumgray);
   border: none;
+}
+
+.bottom-slider-controls::after {
+  content: "";
+  position: absolute;
+  top: -46px;
+  right: 0px;
+  width: 10px;
+  height: 279px;
+  background-image: url(../img/line.png);
+  background-repeat: no-repeat;
+  
 }
 
 .bottom-slider-list {
@@ -1031,10 +1113,9 @@ p.good-store {
   cursor: pointer;
 }
 
-.slider-button:focus {
+.active {
   color: var(--special-mediumgray);
   background-color: var(--basic-white);
-  box-shadow: 0 1px 0 #FFFFFF;
 }
 
 .bottom-slider-controls {
@@ -1403,10 +1484,6 @@ p.good-store {
   font-family: "PT Sans", "Arial", sans-serif;
 }
 
-.catalog-content .container {
-  
-}
-
 .item-in-basket {
   background-color: var(--basic-red);
 }
@@ -1627,8 +1704,6 @@ legend.power-legend {
   opacity: 0.7;
 }
 
-
-
 .filter-input-radio+label::before {
   content: "";
   position: absolute;
@@ -1662,6 +1737,11 @@ legend.power-legend {
 .filter-input-radio:disabled + label::before,
 .filter-input-checkbox:disabled + label::before {
   opacity: 0.3;
+}
+
+.filter-option input[type="checkbox"]:focus + label::before,
+.filter-option input[type="radio"]:focus + label::before {
+  opacity: 0.4;
 }
 
 fielset.line-top {
@@ -1877,7 +1957,7 @@ a.svg:active path {
   fill: var(--basic-red);
 }
 
-a.active path {
+a.active-sorting path {
   fill: var(--basic-red);
 }
 
@@ -1908,7 +1988,7 @@ a.active path {
   text-decoration-color: var(--basic-red);
 }
 
-a.active,
+a.active-sorting,
 .sorting-item a:active {
   color: var(--basic-red);
   opacity: 1;
@@ -1983,18 +2063,14 @@ a.active,
 }
 
 .order-wrapper {
-  width: 146px;
+  width: 195px;
   min-height: 95px;
   position: absolute;
   top: 38px;
-  left: 33px;
   display: flex;
   flex-direction: column;
   background-color: var(--basic-white);
   box-sizing: border-box;
-}
-
-.order-wrapper {
   visibility: hidden;
 }
 
@@ -2009,7 +2085,7 @@ a.active,
 .buy {
   width: 136px;
   margin-bottom: 10px;
-  margin-left: 8px;
+  margin-left: 30px;
   position: relative;
   padding-top: 10px;
   padding-right: 40px;
@@ -2031,7 +2107,7 @@ a.active,
 
 .to-bookmarks {
   width: 136px;
-  margin-left: 8px;
+  margin-left: 30px;
   padding-top: 9px;
   padding-right: 25px;
   padding-bottom: 6px;
@@ -2074,6 +2150,10 @@ a.active,
   text-align: center;
 }
 
+.old-price-without {
+  opacity: 0;
+}
+
 p.curent-price {
   width: 141px;
   height: 38px;
@@ -2084,10 +2164,11 @@ p.curent-price {
   padding-bottom: 10px;
   padding-left: 30px;
   color: var(--basic-white);
-  background-image: url("../img/curent-price.svg");
+  background-image: url("../img/red-button.svg");
   background-position: 0 0;
   background-repeat: no-repeat;
   text-align: center;
+  cursor: pointer;
 }
 
 .buy,
@@ -2179,9 +2260,14 @@ a.next {
 /*pop-up*/
 
 .popup-map {
-  position: absolute;
-  bottom: 333px;
-  left: 302px;
+  position: fixed;
+  top: auto;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width: 980px;
+  height: 449px;
   z-index: 2;
 }
 
@@ -2203,9 +2289,12 @@ a.next {
 }
 
 .feedback-form {
-  position: absolute;
-  bottom: 381px;
-  left: 510px;
+  position: fixed;
+  top: auto;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
   width: 620px;
   height: 423px;
   font-family: "PT Sans", "Arial", sans-serif;
