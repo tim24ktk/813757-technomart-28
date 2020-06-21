@@ -813,6 +813,7 @@ button.bullet-right {
   height: 10px;
   border: 2px solid var(--basic-white);
   border-radius: 50%;
+  cursor: pointer;
 }
 
 .bullet-active {
@@ -1117,7 +1118,7 @@ p.good-store {
 .bottom-slider-item p {
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 13px;
-  line-height: 24px;
+  line-height: 25px;
   color: var(--special-black);
 }
 
@@ -2037,7 +2038,6 @@ a.active-sorting,
 }
 
 .perforators-item {
-  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -2070,7 +2070,11 @@ a.active-sorting,
   margin-right: 0;
 }
 
-.perforators-item::after {
+.new {
+  position: relative;
+}
+
+.new::after {
   content: "new";
   position: absolute;
   top: 8px;
@@ -2494,3 +2498,7 @@ a.next {
 .order-basket {
   display: none;
 }
+
+/*.popup-map {
+  display: block;
+}*/
