@@ -60,9 +60,7 @@ img {
   height: auto;
 }
 
-.visually-hidden:not(:focus):not(:active),
-input[type="checkbox"].visually-hidden,
-input[type="radio"].visually-hidden {
+.visually-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -129,6 +127,31 @@ input[type="radio"].visually-hidden {
   padding-right: 57px;
   padding-bottom: 5px;
   padding-left: 55px;
+  background-color: var(--basic-red);
+  box-shadow: 0 5px 0 rgba(186, 39, 50, 1);
+}
+
+.main-header-logo {
+  margin: 0;
+  padding: 0;
+  width: 220px;
+  padding-top: 5px;
+  padding-right: 57px;
+  padding-bottom: 5px;
+  padding-left: 55px;
+  background-color: var(--basic-red);
+  box-shadow: 0 5px 0 rgba(186, 39, 50, 1);
+
+}
+
+.main-footer-logo {
+  margin: 0;
+  padding: 0;
+  width: 220px;
+  padding-top: 20px;
+  padding-right: 41px;
+  padding-bottom: 20px;
+  padding-left: 41px;
   background-color: var(--basic-red);
   box-shadow: 0 5px 0 rgba(186, 39, 50, 1);
 }
@@ -312,12 +335,12 @@ input[type="radio"].visually-hidden {
 .site-navigation-item:hover {
   background-color: var(--special-darkgray);
 }
+
 .site-navigation-item:active {
   background-color: var(--special-darkgray);
   color: var(--basic-white);
   opacity: 0.5;
 }
-
 
 .navigation-middle {
   display: grid;
@@ -483,9 +506,9 @@ input[type="radio"].visually-hidden {
 }
 
 .site-navigation-item a {
-  padding-top: 16px;
+  padding-top: 17px;
   padding-right: 28px;
-  padding-bottom: 20px;
+  padding-bottom: 22px;
   padding-left: 29px;
   color: var(--basic-white);
 }
@@ -1183,18 +1206,17 @@ p.good-store {
   padding-left: 22px;
 }
 
-.bottom-slider-controls button {
-  cursor: pointer;
-}
-
 .bottom-slider-controls button:not(:first-child):hover {
   color: var(--basic-white);
   background-color: var(--special-darkgray);
+  cursor: pointer;
 }
 
-.active {
+button.active,
+a.active {
   color: var(--special-mediumgray);
   background-color: var(--basic-white);
+  cursor: auto;
 }
 
 .bottom-slider-controls {
@@ -1382,7 +1404,7 @@ p.good-store {
 .footer-contacts p {
   margin: 0;
   padding: 0;
-  margin-top: 26px;
+  margin-top: 21px;
   margin-left: 2px;}
 
 .footer-contacts a,
