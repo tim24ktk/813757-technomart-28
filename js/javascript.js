@@ -27,7 +27,8 @@ try {
 /*display-block окну с извещением о добавлении товара в корзину*/
 buy.forEach(function (elem) {
   elem.onclick = function (evt) {
-    evt.preventDefault();orderBasket.classList.add('display-block');
+    evt.preventDefault();
+    orderBasket.classList.add('display-block');
   };
 });
 
@@ -73,16 +74,17 @@ if (feedbackForm) {
 }
 
 /*добавляем событие кнопке закрыть*/
-for (var i = 0; i < closeButton.length; i++) {
-  closeButton[i].addEventListener('click', function (evt) {
+closeButton.forEach(function (elem) {
+  elem.onclick = function (evt) {
     evt.preventDefault();
-    this.parentElement.classList.remove('display-block');
+    elem.parentElement.classList.remove('display-block');
     if (feedbackForm) {
       feedbackForm.classList.remove('form-display-block');
       feedbackForm.classList.remove('shake-form');
     }
-  });
-}
+  }
+});
+
 
 if (continueShopping) {
   continueShopping.addEventListener('click', function (evt) {
