@@ -1,47 +1,53 @@
 /* объявляем переменные*/
-var order_basket = document.querySelector('.order-basket');
+var orderBasket = document.querySelector('.order-basket');
 var buy = document.querySelectorAll('.buy');
-var close_button = document.querySelectorAll('.close-button');
-var write_us = document.querySelector('.write-us');
-var feedback_form = document.querySelector('.feedback-form');
-var feedback_form_section = document.querySelector('.feedback-form-section');
-var first_name = document.querySelector('[name=first-name]');
-var email = document.querySelector('[name=mail]');
-var letter = document.querySelector('[name=letter]');
-var submit_button = document.querySelector('button');
+var closeButton = document.querySelectorAll('.close-button');
+var writeUs = document.querySelector('.write-us');
+var feedbackForm = document.querySelector('.feedback-form');
+var feedbackFormSection = document.querySelector('.feedback-form-section');
+var firstName = document.querySelector('input[name=first-name]');
+var email = document.querySelector('input[name=mail]');
+var letter = document.querySelector('input[name=letter]');
+var adressImg = document.querySelector('.main-adress img');
+var popupMap = document.querySelector('.popup-map');
+var continueShopping = document.querySelector('.continue-shopping');
 
 var isStorageSupport = true;
-var storage_name = '';
-var storage_email = '';
+var storageName = '';
+var storageEmail = '';
 
 try {
-  storage_name = localStorage.getItem('firstName');
-  storage_email = localStorage.getItem('yourEmail');
+  storageName = localStorage.getItem('firstName');
+  storageEmail = localStorage.getItem('yourEmail');
 } catch (err) {
   isStorageSupport = false;
 }
 
+
 /*display-block окну с извещением о добавлении товара в корзину*/
-for (var i = 0; i < buy.length; i++) {
-  buy[i].addEventListener('click', function (evt) {
-    evt.preventDefault();
-    order_basket.classList.add('display-block');
-  });
-}
+buy.forEach(function (elem) {
+  elem.onclick = function (evt) {
+    evt.preventDefault();orderBasket.classList.add('display-block');
+  };
+});
 
 /*display-block формe обратной связи*/
-if (write_us) {
-  write_us.addEventListener('click', function (evt) {
+if (writeUs) {
+  writeUs.addEventListener('click', function (evt) {
     evt.preventDefault();
-    feedback_form.classList.add('display-block');
-    first_name.focus();
-    if (storage_name) {
-      first_name.value = storage_name;
+    feedbackForm.classList.add('form-display-block');
+    firstName.focus();
+    if (storageName) {
+      firstName.value = storageName;
+      if (email) {
       email.focus();
+        }
     }
-    if (storage_email) {
-      email.value = storage_email;
-      letter.focus();
+    if (storageEmail) {
+      email.value = storageEmail;
+      if (letter) {
+        letter.focus();
+      }
     }
   });
 } else {
@@ -49,14 +55,16 @@ if (write_us) {
 }
 
 /*отправляем и проверяем, чтобы не отправлялась пустая форма*/
-if (feedback_form) {
-  feedback_form_section.addEventListener('submit', function (evt) {
-    if (!first_name.value || !email.value || !letter.value) {
+if (feedbackForm) {
+  feedbackFormSection.addEventListener('submit', function (evt) {
+    if (!firstName.value || !email.value || !letter.value) {
       evt.preventDefault();
-      feedback_form.classList.add('shake-form');
+      feedbackForm.classList.remove('shake-form');
+      feedbackForm.offsetWidth = feedbackForm.offsetWidth;
+      feedbackForm.classList.add('shake-form');
       console.log('Нужно заполнить все поля!');
     } else {
-      localStorage.setItem('firstName', first_name.value);
+      localStorage.setItem('firstName', firstName.value);
       localStorage.setItem('yourEmail', email.value);
     }
   });
@@ -65,24 +73,34 @@ if (feedback_form) {
 }
 
 /*добавляем событие кнопке закрыть*/
-for (var i = 0; i < close_button.length; i++) {
-  close_button[i].addEventListener('click', function (evt) {
+for (var i = 0; i < closeButton.length; i++) {
+  closeButton[i].addEventListener('click', function (evt) {
     evt.preventDefault();
     this.parentElement.classList.remove('display-block');
-    feedback_form.classList.remove('shake-form');
+    if (feedbackForm) {
+      feedbackForm.classList.remove('form-display-block');
+      feedbackForm.classList.remove('shake-form');
+    }
+  });
+}
+
+if (continueShopping) {
+  continueShopping.addEventListener('click', function (evt) {
+    evt.preventDefault();
+    orderBasket.classList.remove('display-block');
   });
 }
 
 window.addEventListener('keydown', function (evt) {
   if (evt.keyCode === 27) {
-    if (order_basket) {
+    if (orderBasket) {
       evt.preventDefault();
-      order_basket.classList.remove('display-block');
+      orderBasket.classList.remove('display-block');
     }
-    if (feedback_form) {
+    if (feedbackForm) {
       evt.preventDefault();
-      feedback_form.classList.remove('display-block');
-      feedback_form.classList.remove('shake-form');
+      feedbackForm.classList.remove('form-display-block');
+      feedbackForm.classList.remove('shake-form');
     }
     else {
       console.log('Переменная не определена!');
