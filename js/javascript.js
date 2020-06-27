@@ -51,8 +51,6 @@ if (writeUs) {
       }
     }
   });
-} else {
-  console.log('Переменная не определена!');
 }
 
 /*отправляем и проверяем, чтобы не отправлялась пустая форма*/
@@ -69,8 +67,14 @@ if (feedbackForm) {
       localStorage.setItem('yourEmail', email.value);
     }
   });
-} else {
-  console.log('Переменная не определена!');
+}
+
+/*открываем карту*/
+if (popupMap) {
+  adressImg.addEventListener('click', function (evt) {
+    evt.preventDefault();
+    popupMap.classList.add('display-block');
+  });
 }
 
 /*добавляем событие кнопке закрыть*/
@@ -103,9 +107,7 @@ window.addEventListener('keydown', function (evt) {
       evt.preventDefault();
       feedbackForm.classList.remove('form-display-block');
       feedbackForm.classList.remove('shake-form');
-    }
-    else {
-      console.log('Переменная не определена!');
+      popupMap.classList.remove('display-block');
     }
   }
 });
