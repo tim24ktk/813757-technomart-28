@@ -1237,6 +1237,7 @@ button.active {
   width: 300px;
   min-height: 158px;
   background-color: var(--basic-black);
+  cursor: pointer;
 }
 
 .main-adress a.write-us {
@@ -2265,7 +2266,6 @@ p.curent-price {
   background-position: 0 0;
   background-repeat: no-repeat;
   text-align: center;
-  cursor: pointer;
 }
 
 .buy,
@@ -2367,10 +2367,11 @@ a.next {
   left: 0;
   margin: auto;
   width: 980px;
-  height: 449px;
+  max-height: 449px;
   z-index: 2;
   transform: translate(0, -50%);
   border-top: 7px solid var(--basic-red);
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
 }
 
 .popup-map p {
@@ -2386,6 +2387,10 @@ a.next {
   z-index: 3;
 }
 
+.popup-map img {
+  max-height: 449px;
+}
+
 .map-close-button {
   position: absolute;
   top: 10px;
@@ -2397,10 +2402,6 @@ a.next {
   background-repeat: no-repeat;
   background-color: transparent;
   cursor: pointer;
-}
-
-.popup-map img {
-  box-shadow: none;
 }
 
 .feedback-form {
