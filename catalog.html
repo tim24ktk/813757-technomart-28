@@ -6,7 +6,7 @@
     <title>HTML Academy: Техномарт</title>
     <link href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400;0,700;1,400&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/minstyle.css" rel="stylesheet">
   </head>
   <body class="page-body">
     <header class="main-header">
@@ -84,9 +84,7 @@
       <div class="container">
         <ul class="bread-crumbs-list">
           <li class="bread-crumbs-item">
-            <a href="" aria-label="переход на домашнюю страницу">
-              <img src="img/icon-home.svg" alt="На домашнюю страницу" width="12" height="15">
-            </a>
+            <a class="to-home" href="" aria-label="переход на домашнюю страницу"></a>
           </li>
           <li class="bread-crumbs-item">
             <a href="">Каталог</a>
@@ -113,13 +111,16 @@
                   <div class="toggle toggle-max" tabindex="0"></div>
                 </div>
                 <div class="price-controls">
-                  <input type="text" name="min-price" value="0">
-                  <input type="text" name="max-price" value="30000">
+                  <label class="visually-hidden">Минимальная цена
+                    <input type="text" name="min-price" value="0">
+                  </label>
+                  <label class="visually-hidden">Максимальная цена
+                    <input type="text" name="max-price" value="30000">
+                  </label>
                 </div>
               </div>
             </fieldset>
-            <div class="line-top"></div>
-            <fieldset>
+            <fieldset class="fieldset-with-border">
               <legend>Производители:</legend>
               <ul>
                 <li class="filter-option">
@@ -144,7 +145,6 @@
                 </li>
               </ul>
             </fieldset>
-            <div class="line-bottom"></div>
             <fieldset>
               <legend class="power-legend">Питание:</legend>
               <ul>
